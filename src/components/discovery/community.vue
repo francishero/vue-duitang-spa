@@ -57,7 +57,6 @@ mounted () {
 </script>
 
 <style lang="stylus" scoped>
-// .community
 .community_hd
   height 70px
   display flex
@@ -71,10 +70,6 @@ mounted () {
   width 4rem
   height 38px
   text-align center
-// .community_bd
-//   height 500px
-//   background-color blue
-// .dt_test
 .dt_test_title
   position relative
   background-color #f4f4f4
@@ -98,7 +93,7 @@ mounted () {
   border .5px solid #fe5858
   border-radius 38%
 .dt_test_block
-  height 8.5rem
+  height 7rem
   border-bottom .5px solid #f4f4f4
 .dt_test_hd
   position relative
@@ -121,7 +116,7 @@ mounted () {
   margin-left .3rem
 .dt_test_bd
   background-color pink
-  height 7rem
+  height 5rem
 .dt_test_bd>img
   width 4rem
   height 3.5rem

@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="discovery">
-
+    <!-- 头部 -->
+  <mt-search  cancel-text="取消" placeholder="搜索感兴趣的内容"></mt-search>
 
   <swiper :options="swiperOption" ref="mySwiper" class="discovery-all">
     <!-- slides -->
@@ -16,10 +17,12 @@
   </div>
 </template>
 <script>
+// import Dheader from "../../components/public/head.vue"
 import Content from '../../components/discovery/content'
 import Community from '../../components/discovery/community'
 export default {
   components: {
+    // 'd-header': Dheader,
     'discovery-content': Content,
     'discovery-community': Community
   },
@@ -66,8 +69,7 @@ export default {
 
 <style lang="stylus" scoped>
  .discovery
-    margin-top 42px
-    margin-bottom 60px
+    margin-bottom 40px
  .discovery-all
     position relative
   .nav_blank
