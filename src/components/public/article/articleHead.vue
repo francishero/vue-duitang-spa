@@ -1,7 +1,7 @@
 <template>
 <div class="article-head">
    <mt-header fixed title="文章详情">
-    <router-link to="/" slot="left">
+    <router-link to="" v-on:click.native="goback" slot="left">
       <mt-button icon="back"></mt-button>
     </router-link>
   <mt-button icon="more" slot="right"></mt-button>
@@ -12,7 +12,13 @@
 
 <script>
 export default {
-
+methods: {
+    // goback返回
+    goback () {
+      console.log(1)
+      window.history.go(-1)
+    }
+  }
 
 }
 </script>

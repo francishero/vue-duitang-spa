@@ -47,17 +47,17 @@
         </mt-tab-container-item>
         <mt-tab-container-item id="tab-container2"><beauty></beauty>
         </mt-tab-container-item>
-        <mt-tab-container-item id="tab-container3">333
+        <mt-tab-container-item id="tab-container3"><food></food>
         </mt-tab-container-item>
-        <mt-tab-container-item id="tab-container4">444
+        <mt-tab-container-item id="tab-container4"><life></life>
         </mt-tab-container-item>
-        <mt-tab-container-item id="tab-container5">555
+        <mt-tab-container-item id="tab-container5"><bmm></bmm>
         </mt-tab-container-item>
-        <mt-tab-container-item id="tab-container7">666
+        <mt-tab-container-item id="tab-container7"><trip></trip>
         </mt-tab-container-item>
-        <mt-tab-container-item id="tab-container8">777
+        <mt-tab-container-item id="tab-container8"><draw></draw>
         </mt-tab-container-item>
-        <mt-tab-container-item id="tab-container9">888
+        <mt-tab-container-item id="tab-container9"><photograph></photograph>
         </mt-tab-container-item>
       </mt-tab-container>
     </div>
@@ -68,12 +68,24 @@ import Dheader from "../../components/public/head.vue"
 import Dpopup from "../../components/public/popup.vue"
 import Dailyselect from '../../components/firstpage/dailyselect'
 import Beauty from '../../components/firstpage/beauty'
+import Food from '../../components/firstpage/food'
+import Life from '../../components/firstpage/life'
+import Bmm from '../../components/firstpage/bmm'
+import Trip from '../../components/firstpage/trip'
+import Draw from '../../components/firstpage/draw'
+import Photograph from '../../components/firstpage/photograph'
 export default {
    components: {
      'd-header': Dheader,
      'd-popup': Dpopup,
     'daily-select':Dailyselect,
-    'beauty': Beauty
+    'beauty': Beauty,
+    'food': Food,
+    'life': Life,
+    'bmm': Bmm,
+    'trip': Trip,
+    'draw': Draw,
+    'photograph': Photograph
   },
   data() {
     return {

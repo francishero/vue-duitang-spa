@@ -26,7 +26,7 @@
       <div class="dt_test_block">
         <h3 class="dt_test_hd">
           <span class="test_hd_front">试用</span>
-        这是标题标题
+        {{articles1.title}}
         </h3>
           <div class="dt_test_bd">
             <img src="#" alt="">
@@ -47,11 +47,18 @@
 export default {
 data() {
     return {
-
+      articles1:[]
     };
   },
 mounted () {
-
+this.axios.get('https://www.easy-mock.com/mock/5a1d88738e6ddb24964d081b/duitang/articles')
+      .then((response) => {
+        this.articles1 = response.data.articles
+        // console.log(this.articles)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
 }
 }
 </script>
@@ -106,13 +113,13 @@ mounted () {
   position absolute
   top 0
   left -1.2rem
-  width .6rem
+  width .65rem
   height .4rem
   text-align center
   line-height .4rem
   background-color #F39854
   color #fefefe
-  font-size 10px
+  font-size 8px
   margin-left .3rem
 .dt_test_bd
   background-color pink

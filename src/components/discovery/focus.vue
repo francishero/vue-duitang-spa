@@ -1,77 +1,56 @@
-<!-- The ref attr used to find the swiper instance -->
-<template>
+<template lang="html">
 <div class="focus">
-
-
+  <div class="mine">
+   <div class="mine-container">
+     <img src="../../assets/dt_logo.png" alt="">
+     <h5>轻松注册，即可永久保存你的所爱<br>
+     换了手机也能找得到哦</h5>
+     <a href="#" class="button_left">注册</a>
+     <a href="#" class="button_right">登录</a>
   </div>
+  </div>
+</div>
 </template>
-
 <script>
-  // export default {
+export default {
+  data() {
+    return {
 
-  //   data() {
-  //     return {
-  //       swiperOption1: {
-  //         // some swiper options/callbacks
-  //         // 所有的参数同 swiper 官方 api 参数
-  //         // ...
-  //         // initialSlide :1,
-  //         slidesPerView : 5,
-  //         // spaceBetween : 20,
-  //         slideToClickedSlide: true,
-  //         direction : 'horizontal',
-  //         // height: 300,
-  //         autoHeight:true,
-  //         scrollbar: {
-  //           el: '.swiper-scrollbar',
-  //         },
-  //         // hashNavigation: true,
-  //         // watchState: true
-  //       },
-  //       swiperOption2: {
-  //         // some swiper options/callbacks
-  //         // 所有的参数同 swiper 官方 api 参数
-  //         // ...
-  //         initialSlide :1,
-  //         // slidesPerView : 3,
-  //         slideToClickedSlide: true,
-  //         direction : 'horizontal',
-  //         // height: 300,
-  //         autoHeight:true,
-  //         hashNavigation: {
-  //           watchState: true,
-  //         }
-
-  //       }
-
-
-  //     }
-  //   },
-  //   computed: {
-  //     swiper1() {
-  //       return this.$refs.mySwiper1.swiper
-  //     },
-  //     swiper2() {
-  //       return this.$refs.mySwiper2.swiper
-  //     }
-  //   },
-  //   mounted() {
-  //     // current swiper instance
-  //     // 然后你就可以使用当前上下文内的swiper对象去做你想做的事了
-  //     console.log('this is current swiper instance object', this.swiper)
-  //     // this.swiper.slideTo(0, 1000, false);
-  //     // this.swiper1.scrollbar.$el.css('background','red');
-  //   }
-  // }
+    };
+  }
+}
 </script>
-<style lang="stylus">
-  .focus
-    margin-top 87px
-    height 400px
-    margin-bottom 50px
 
-
-
-
-
+<style lang="stylus" scoped>
+.mine
+  width 10rem
+  height 18rem
+  background-color #f6f6f6
+.mine-container
+  margin-top 100px
+  height 7rem
+  width 10rem
+  text-align center
+.mine-container>img
+  margin-bottom 10px
+.mine-container>h5
+  font-size 16px
+  margin-bottom 15px
+  color #000
+  font-family "微软雅黑"
+.mine-container a
+  display inline-block
+  width 4rem
+  height 1rem
+  margin .2rem
+  text-align center
+  line-height 1rem
+  font-size 16px
+  border-radius 5%
+.mine-container .button_left
+  background-color #FF595B
+  color #fff
+.mine-container .button_right
+  border 1px solid #F47887
+  color #F47887
 </style>
