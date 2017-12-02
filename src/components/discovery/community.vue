@@ -16,7 +16,7 @@
         这是标题标题
         </h3>
           <div class="dt_test_bd">
-            <img src="#" alt="">
+            <img src="../../assets/img/dt_test/t1.jpeg" alt="">
           </div>
           <div class="dt_test_ft">
             <div class="test_ft_left">堆糖试用申请</div>
@@ -26,10 +26,10 @@
       <div class="dt_test_block">
         <h3 class="dt_test_hd">
           <span class="test_hd_front">试用</span>
-        {{articles1.title}}
+        这是标题标题
         </h3>
           <div class="dt_test_bd">
-            <img src="#" alt="">
+            <img src="../../assets/img/dt_test/t2.jpeg" alt="">
           </div>
           <div class="dt_test_ft">
             <div class="test_ft_left">堆糖试用申请</div>
@@ -47,19 +47,9 @@
 export default {
 data() {
     return {
-      articles1:[]
+
     };
-  },
-mounted () {
-this.axios.get('https://www.easy-mock.com/mock/5a1d88738e6ddb24964d081b/duitang/articles')
-      .then((response) => {
-        this.articles1 = response.data.articles
-        // console.log(this.articles)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-}
+  }
 }
 </script>
 
@@ -122,11 +112,10 @@ this.axios.get('https://www.easy-mock.com/mock/5a1d88738e6ddb24964d081b/duitang/
   font-size 8px
   margin-left .3rem
 .dt_test_bd
-  background-color pink
   height 5rem
 .dt_test_bd>img
-  width 4rem
-  height 3.5rem
+  width 100%
+  height 100%
 .dt_test_ft
   position relative
   height 1.2rem

@@ -1,8 +1,10 @@
 <template lang="html">
   <div class="discovery">
     <!-- 头部 -->
+    <div class="discovery_header">
     <mt-search  cancel-text="取消" placeholder="搜索感兴趣的内容"></mt-search>
     <a href="#"><span class="qr_code"><img src="../../assets/qr.png"></span></a>
+    </div>
     <swiper :options="swiperOption" ref="mySwiper" class="discovery-all">
       <!-- slides -->
       <swiper-slide data-hash="content"><div class="nav_blank"></div><discovery-content></discovery-content></swiper-slide>
@@ -68,12 +70,18 @@ export default {
 <style lang="stylus" scoped>
 .discovery
   margin-bottom 40px
+.discovery_header
+  position fixed
+  top 0
+  z-index 1000
 .qr_code
-  position absolute
+  position fixed
   right .3rem
-  top .3rem
-  width .7rem
-  height .7rem
+  top .24rem
+  width .6rem
+  height .6rem
+  background-color #fefefe
+  z-index 1000
   display inline-block
 .qr_code>img
   width 100%
@@ -82,10 +90,10 @@ export default {
   position relative
 .nav_blank
   width 100%
-  height 33px
+  height 70px
 .swiper-pagination-bullets
-  position absolute
-  top 0
+  position fixed
+  top 42px
   width 10rem
   height 30px
   z-index 1000

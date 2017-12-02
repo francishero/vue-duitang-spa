@@ -25,7 +25,6 @@ export default {
 .mine
   width 10rem
   height 18rem
-  background-color #f6f6f6
 .mine-container
   margin-top 100px
   height 7rem

@@ -1,11 +1,15 @@
 <template>
   <div class="content">
     <div class="content_head">
-      <a href="#">
-        <div class="hot_link content_head_block"></div>
+      <a href="https://github.com/hellocassiell">
+        <div class="hot_link content_head_block">
+          <icon name="github" scale="2"></icon><br>github
+        </div>
       </a>
-      <a href="#">
-        <div class="new_link content_head_block"></div>
+      <a href="https://weibo.com/u/2294561524">
+        <div class="new_link content_head_block">
+          <icon name="weibo" scale="2"></icon><br>weibo
+        </div>
       </a>
     </div>
     <div class="content_bd">
@@ -43,7 +47,6 @@ export default {
   background-color #f4f4f4
 .content_head
   height 80px
-  border 1px solid red
   display flex
   background-color #fefefe
   justify-content center
@@ -51,9 +54,10 @@ export default {
 .content_head_block
   flex 1
   width 3.7rem
-  height 40px
+  height 1.4rem
   display inline-block
-  background pink
+  border 1px solid gray
+  border-radius 10%
   margin .4rem
 .Grid
   display flex

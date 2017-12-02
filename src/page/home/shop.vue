@@ -2,6 +2,7 @@
   <div class="shop">
 
   <mt-search  cancel-text="取消" placeholder="在商店中搜索..."></mt-search>
+  <a href="#"><span class="shop_car"><img src="../../assets/shop-car.png"></span></a>
   <!-- 轮播图 -->
     <mt-swipe :auto="4000" class="shop-swiper">
       <mt-swipe-item v-for="swipeItem in swipeArr"  :key="swipeItem.id"  :style="{backgroundImage:'url(' + swipeItem.swipeUrl + ')'}">
@@ -58,6 +59,16 @@ this.axios.get('https://www.easy-mock.com/mock/5a1d88738e6ddb24964d081b/duitang/
 </script>
 
 <style lang="stylus" scoped>
+.shop_car
+  position absolute
+  right .3rem
+  top .2rem
+  width .6rem
+  height .57rem
+  display inline-block
+.shop_car>img
+  width 100%
+  height 100%
 .shop-swiper
   text-align center
 .shop-swiper-mask
