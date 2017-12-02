@@ -4,10 +4,6 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    // {
-    //   path: '/article-video/:id',
-    //   component: resolve => require(['@/page/article/article-video'], resolve)
-    // },
     {
       path: '/article/:id',
       component: resolve => require(['@/page/article/article'], resolve)
