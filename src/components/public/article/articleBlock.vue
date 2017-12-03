@@ -1,7 +1,6 @@
 <template>
-<div class="article-block">
+<div class="article-block" @click="loadIt">
   <router-link :to="articleIndex.url">
-    <!-- <a href="/discovery/focus"> -->
     <header class="b-header">
       <a class="b-author-link" href="#">
       <img :src="articleIndex.authorPic" alt="作者头像">
@@ -23,7 +22,19 @@
 
 <script>
 export default {
- props: ['articleIndex']
+ props: ['articleIndex'],
+ methods: {
+   loadIt () {
+
+     this.$indicator.open('加载中...');
+     let that = this;
+     setTimeout(function(){
+       that.$indicator.close();
+     },500)
+
+
+  }
+ }
 }
 </script>
 

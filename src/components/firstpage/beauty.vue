@@ -10,15 +10,13 @@
       </mt-swipe-item>
     </mt-swipe>
     <!-- 文章列表 -->
-    <div class="article-list" v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="10">
-    <article-block  v-for="articleIndex in articles" :articleIndex="articleIndex" :key="articleIndex.id">
-    </article-block>
+    <div class="article-list">
     <article-block  v-for="articleIndex in articles" :articleIndex="articleIndex" :key="articleIndex.id">
     </article-block>
     <!-- 底部无限加载 -->
     <p v-show="loading" class="page-infinite-loading">
         <mt-spinner type="fading-circle"></mt-spinner>
-      </p>
+    </p>
     </div>
     </mt-loadmore>
   </div>
@@ -36,7 +34,7 @@ this.axios.get('https://www.easy-mock.com/mock/5a1d88738e6ddb24964d081b/duitang/
       })
       .catch((error) => {
         console.log(error)
-      }),
+      })
 this.axios.get('https://www.easy-mock.com/mock/5a1d88738e6ddb24964d081b/duitang/articles')
       .then((response) => {
         this.articles = response.data.articles
@@ -51,7 +49,7 @@ data() {
       swipeArr: [],
       articles: [],
       loading: false,
-      allLoaded: false
+      allLoaded: false,
     };
   },
 components: {
@@ -76,24 +74,9 @@ components: {
     },
      handleTopChange () {
 
-    },
-    // 加载更多
-    loadMore() {
-      this.loading = true
-      this.axios.get('https://www.easy-mock.com/mock/5a1d88738e6ddb24964d081b/duitang/articles')
-      .then((response) => {
-        // 底部增加articles数组
-        response.data.articles.map(item => {
-          this.articles.push(item)
-        })
-        this.loading = false
-      })
-      .catch(function (error) {
-        console.log(error)
-      })
     }
-  },
-}
+
+}}
 </script>
 
 <style lang="stylus" scoped>

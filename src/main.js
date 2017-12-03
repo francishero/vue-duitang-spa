@@ -3,12 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// 自定义样式，覆盖原有mint-ui样式
 import './assets/css/mint-ui-style.css'
 import MintUI from 'mint-ui'
 import axios from 'axios'
 import store from '@/store/index'
+// font awesome图标
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
+// 轮播图，滑动
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 // require styles
