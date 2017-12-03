@@ -52,6 +52,9 @@ data () {
     }
 }
 </script>
-<style>
-
+<style lang="stylus" scoped>
+.mint-tab-item-label a
+  display inline-block
+  width 100%
+  height 100%
 </style>
