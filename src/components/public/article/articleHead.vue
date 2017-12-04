@@ -1,7 +1,7 @@
 <template>
 <div class="article-head">
    <mt-header fixed title="文章详情">
-    <router-link to="" v-on:click.native="goback" slot="left">
+    <router-link to="/" v-on:click.native="goback" slot="left">
       <mt-button icon="back"></mt-button>
     </router-link>
   <mt-button icon="more" slot="right"></mt-button>
