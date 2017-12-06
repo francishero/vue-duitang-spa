@@ -29,7 +29,10 @@ export default new Router({
         path: '/mine',
         name: 'Mine',
         component: resolve => require(['@/page/home/mine'], resolve),
-      }]
+      },{
+        path: '/club',
+        component: resolve => require(['@/page/article/club'], resolve)
+      },]
     }
 
   ],
