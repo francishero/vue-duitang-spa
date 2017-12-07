@@ -11,7 +11,7 @@
 - esay-mock模拟数据
 - stylus编写样式
 
-![alt text](http://ozlrrk52c.bkt.clouddn.com/Animation.gif)
+预览(http://ozlrrk52c.bkt.clouddn.com/Animation.gif)
 
 
 ## Build Setup
