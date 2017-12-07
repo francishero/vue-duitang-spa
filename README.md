@@ -12,7 +12,9 @@
 - stylus编写样式
 
 预览(http://ozlrrk52c.bkt.clouddn.com/Animation.gif)
-
+(http://ozlrrk52c.bkt.clouddn.com/Animation1.gif)
+(http://ozlrrk52c.bkt.clouddn.com/Animation2.gif)
+(http://ozlrrk52c.bkt.clouddn.com/Animation3.gif)
 
 ## Build Setup
 
