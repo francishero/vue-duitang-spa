@@ -30,7 +30,6 @@ data() {
     };
   },
   mounted () {
-    this.selected = 2;
 
   }
 }
