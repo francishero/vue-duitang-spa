@@ -21,18 +21,5 @@ export default {
   color: #2c3e50;
   /* margin-top: 60px; */
 }
-/* 自定义导航 */
-.swiper-pagination-bullet-custom {
-    width: 3rem;
-    height: 30px;
-    background: #fefefe;
-    border-radius: 0;
- }
- .swiper-pagination-bullet-custom.swiper-pagination-bullet-active {
-    color: #FE5858;
-    border-bottom: .01rem solid #FE5858
- }
- .swiper-slide {
-   text-align: center
- }
+
 </style>

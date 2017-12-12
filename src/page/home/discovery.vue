@@ -7,9 +7,9 @@
     </div>
     <swiper :options="swiperOption" ref="mySwiper" class="discovery-all">
       <!-- slides -->
-      <swiper-slide data-hash="content"><div class="nav_blank"></div><discovery-content></discovery-content></swiper-slide>
-      <swiper-slide data-hash="community"><div class="nav_blank"></div><discovery-community></discovery-community></swiper-slide>
-      <swiper-slide data-hash="focus"><div class="nav_blank"></div><discovery-focus></discovery-focus></swiper-slide>
+      <swiper-slide data-hash="discovery/content"><div class="nav_blank"></div><discovery-content></discovery-content></swiper-slide>
+      <swiper-slide data-hash="discovery/community"><div class="nav_blank"></div><discovery-community></discovery-community></swiper-slide>
+      <swiper-slide data-hash="discovery/focus"><div class="nav_blank"></div><discovery-focus></discovery-focus></swiper-slide>
       <div class="swiper-pagination swiper-pagination-bullets" slot="pagination"></div>
     </swiper>
 
@@ -41,7 +41,7 @@ export default {
             el: '.swiper-scrollbar'
           },
           hashNavigation: {
-            watchState: true,
+            // watchState: true,
           },
           pagination: {
             el: '.swiper-pagination',
@@ -104,4 +104,20 @@ export default {
 .swiper-wrapper
   background-color red
 
+</style>
+<style>
+/* 自定义导航 */
+.swiper-pagination-bullet-custom {
+    width: 3rem;
+    height: 30px;
+    background: #fefefe;
+    border-radius: 0;
+ }
+ .swiper-pagination-bullet-custom.swiper-pagination-bullet-active {
+    color: #FE5858;
+    border-bottom: .01rem solid #FE5858
+ }
+ .swiper-slide {
+   text-align: center
+ }
 </style>
