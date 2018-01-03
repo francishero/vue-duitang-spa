@@ -30,7 +30,7 @@ npm run dev
 ### 项目打包
 npm run build后会有一个dist目录，这个文件夹就是我们要部署上线的项目
 
-### 写一个小脚本
+### 写一个小脚本app.js
 ```
 const fs = require('fs');
 const path = require('path');
@@ -38,11 +38,55 @@ const express = require('express');
 const app = express();
 
 
-app.use(express.static(path.resolve(__dirname, './public')))
+app.use(express.static(path.resolve(__dirname, './dist')))
 
 app.get('*', function(req, res) {
-    const html = fs.readFileSync(path.resolve(__dirname, './public/index.html'), 'utf-8')
+    const html = fs.readFileSync(path.resolve(__dirname, './dist/index.html'), 'utf-8')
     res.send(html)
 })
 app.listen(8081);
 ```
+这个脚本使用了express框架,所以我们可以生成一个package.json，把依赖项添加进去
+```
+{
+    "name": "vue-duitang",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.15.3"
+    }
+  }
+```
+把 dist目录  app.js  package.json  三者 上传到服务器 /root/www/duitang 文件夹下
+再 npm i  生成 node_modules目录
+再pm2 start app.js成功启动服务
+
+现在通过ip加端口形式能正常访问，但是如果想通过域名访问就需要配置nginx映射
+到/etc/nginx/conf.d/目录下  新建 duitang-8082.conf 编辑
+```
+upstream dt {
+    server 127.0.0.1:8082;
+}
+
+server {
+    listen 80;
+    server_name hellocassie.cn;
+
+    location / {
+        proxy_set_header Host  $http_host;
+        proxy_set_header X-Real-IP  $remote_addr;
+        proxy_set_header X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_set_header X-Nginx-proxy true;
+        proxy_pass http://dt;
+        proxy_redirect off;
+    }
+}
+
+```
+执行sudo nginx -s reload重启nginx服务器，过会就应该能正常访问了
