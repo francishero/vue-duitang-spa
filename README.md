@@ -26,3 +26,23 @@ npm install
 npm run dev
 
 ```
+## 部署到服务器
+### 项目打包
+npm run build后会有一个dist目录，这个文件夹就是我们要部署上线的项目
+
+### 写一个小脚本
+```
+const fs = require('fs');
+const path = require('path');
+const express = require('express');
+const app = express();
+
+
+app.use(express.static(path.resolve(__dirname, './public')))
+
+app.get('*', function(req, res) {
+    const html = fs.readFileSync(path.resolve(__dirname, './public/index.html'), 'utf-8')
+    res.send(html)
+})
+app.listen(8081);
+```
