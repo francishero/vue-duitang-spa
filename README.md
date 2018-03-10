@@ -92,3 +92,5 @@ server {
 
 ```
 执行sudo nginx -s reload重启nginx服务器，过会就应该能正常访问了
+
+dddd

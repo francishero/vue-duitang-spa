@@ -35,10 +35,11 @@ this.axios.get('https://www.easy-mock.com/mock/5a1d88738e6ddb24964d081b/duitang/
       .catch((error) => {
         console.log(error)
       })
+ 
 this.axios.get('https://www.easy-mock.com/mock/5a1d88738e6ddb24964d081b/duitang/articles')
       .then((response) => {
         this.articles = response.data.articles
-        // console.log(this.articles)
+ 
       })
       .catch((error) => {
         console.log(error)
