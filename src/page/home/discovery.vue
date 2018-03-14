@@ -5,13 +5,25 @@
     <mt-search  cancel-text="取消" placeholder="搜索感兴趣的内容"></mt-search>
     <a href="#"><span class="qr_code"><img src="../../assets/qr.png"></span></a>
     </div>
-    <swiper :options="swiperOption" ref="mySwiper" class="discovery-all">
-      <!-- slides -->
-      <swiper-slide data-hash="discovery/content"><div class="nav_blank"></div><discovery-content></discovery-content></swiper-slide>
-      <swiper-slide data-hash="discovery/community"><div class="nav_blank"></div><discovery-community></discovery-community></swiper-slide>
-      <swiper-slide data-hash="discovery/focus"><div class="nav_blank"></div><discovery-focus></discovery-focus></swiper-slide>
-      <div class="swiper-pagination swiper-pagination-bullets" slot="pagination"></div>
-    </swiper>
+    <!-- navbar -->
+  <mt-navbar v-model="selected">
+    <mt-tab-item id="1">社区</mt-tab-item>
+    <mt-tab-item id="2">内容</mt-tab-item>
+    <mt-tab-item id="3">关注</mt-tab-item>
+  </mt-navbar>
+   
+   <!-- tab-container -->
+<mt-tab-container class="tab_container" v-model="selected">
+  <mt-tab-container-item id="1">
+    <discovery-community></discovery-community>
+  </mt-tab-container-item>
+  <mt-tab-container-item id="2">
+    <discovery-content></discovery-content>
+  </mt-tab-container-item>
+  <mt-tab-container-item id="3">
+    <discovery-focus></discovery-focus> 
+  </mt-tab-container-item>
+</mt-tab-container>
 
 
   </div>
@@ -28,38 +40,13 @@ export default {
   },
    data() {
       return {
-        selected: '发现',
-        swiperOption: {
-          // some swiper options/callbacks
-          // 所有的参数同 swiper 官方 api 参数
-          // ...
-          initialSlide :0,
-          slideToClickedSlide: true,
-          direction : 'horizontal',
-          autoHeight:true,
-          scrollbar: {
-            el: '.swiper-scrollbar'
-          },
-          hashNavigation: {
-            // watchState: true,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-
-            renderBullet(index, className) {
-              var discoveryArr= ['内容','社区','关注'];
-              return `<span class="${className} swiper-pagination-bullet-custom">${discoveryArr[index]}</span>`;
-
-            }
-          }
-        }
+        selected: '1',
+        
+       
       }
     },
     computed: {
-      swiper() {
-        return this.$refs.mySwiper.swiper
-      }
+     
     },
      mounted() {
     }
@@ -86,38 +73,10 @@ export default {
 .qr_code>img
   width 100%
   height 100%
-.discovery-all
-  position relative
-.nav_blank
-  width 100%
-  height 70px
-.swiper-pagination-bullets
-  position fixed
-  top 42px
-  width 10rem
-  height 30px
-  z-index 1000
-  text-align center
-  line-height 30px
-  font-size 14px
-  color #000
-.swiper-wrapper
-  background-color red
-
-</style>
-<style>
-/* 自定义导航 */
-.swiper-pagination-bullet-custom {
-    width: 3rem;
-    height: 30px;
-    background: #fefefe;
-    border-radius: 0;
- }
- .swiper-pagination-bullet-custom.swiper-pagination-bullet-active {
-    color: #FE5858;
-    border-bottom: .01rem solid #FE5858
- }
- .swiper-slide {
-   text-align: center
- }
+.mint-navbar
+ margin-top 37px
+.mint-navbar .mint-tab-item.is-selected
+  margin-bottom 0
+  border-bottom 3px solid #FF595B
+  color #FF595B
 </style>

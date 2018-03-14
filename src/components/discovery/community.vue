@@ -1,9 +1,12 @@
 <template>
   <div class="community">
   <div class="community_hd">
+    <router-link to="/all" class="circles-left">
     <div class="community_hd_club">
       发现感兴趣的Club &gt;
     </div>
+    </router-link>
+     
   </div>
   <div class="community_bd">
     <div class="dt_test">
@@ -47,7 +50,7 @@
 export default {
 data() {
     return {
-
+       
     };
   }
 }
@@ -127,4 +130,5 @@ data() {
 .test_ft_right
   position absolute
   right .2rem
+
 </style>

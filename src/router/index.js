@@ -21,6 +21,7 @@ export default new Router({
         path: '/discovery',
         name: 'discovery',
         component: resolve => require(['@/page/home/discovery'], resolve),
+        
       }, {
         path: '/shop',
         name: 'shop',
@@ -30,11 +31,12 @@ export default new Router({
         name: 'Mine',
         component: resolve => require(['@/page/home/mine'], resolve),
       },{
-        path: '/club',
-        component: resolve => require(['@/page/article/club'], resolve)
-      },]
+        path: '/all',
+        name: 'all',
+        component: resolve => require(['@/components/discovery/all'], resolve),
+      }]
     }
 
-  ]
-  // mode: 'history'
+  ],
+  mode: 'history'
 })

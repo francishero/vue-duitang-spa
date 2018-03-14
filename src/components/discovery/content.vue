@@ -1,16 +1,7 @@
 <template>
   <div class="content">
     <div class="content_head">
-      <a href="https://github.com/hellocassiell">
-        <div class="hot_link content_head_block">
-          <icon name="github" scale="2"></icon><br>github
-        </div>
-      </a>
-      <a href="https://weibo.com/u/2294561524">
-        <div class="new_link content_head_block">
-          <icon name="weibo" scale="2"></icon><br>weibo
-        </div>
-      </a>
+     
     </div>
     <div class="content_bd">
     <div class="Grid">
@@ -45,20 +36,6 @@ export default {
 .content
   height 20rem
   background-color #f4f4f4
-.content_head
-  height 80px
-  display flex
-  background-color #fefefe
-  justify-content center
-  margin-bottom .5rem
-.content_head_block
-  flex 1
-  width 3.7rem
-  height 1.4rem
-  display inline-block
-  border 1px solid gray
-  border-radius 10%
-  margin .4rem
 .Grid
   display flex
   width 10rem
@@ -70,6 +47,7 @@ export default {
   flex 0 0 25%
   height 2.4rem
   margin .4rem
+  text-align center
   padding-bottom .4rem
 .Grid-cell a>img
   width 100%

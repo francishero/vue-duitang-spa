@@ -1,55 +1,49 @@
 <template lang="html">
 <div class="focus">
-  <div class="mine">
-   <div class="mine-container">
-     <img src="../../assets/dt_logo.png" alt="">
-     <h5>轻松注册，即可永久保存你的所爱<br>
-     换了手机也能找得到哦</h5>
-     <a href="#" class="button_left">注册</a>
-     <a href="#" class="button_right">登录</a>
-  </div>
-  </div>
+  
+     <ul class="clubs">
+          <li class="clubs__item" v-for="club in clubsArr" :key="club.id">
+            <img :src="club.photo.path" alt="">
+            <h3>{{club.name}}</h3>
+            <p>成员{{club.member_count}}</p>
+          </li>
+        </ul>
+ 
 </div>
 </template>
 <script>
 export default {
   data() {
     return {
-
+          clubsArr: this.$store.state.clubs
+       
     };
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-.mine
-  width 10rem
-  height 18rem
-.mine-container
-  margin-top 100px
-  height 7rem
-  width 10rem
-  text-align center
-.mine-container>img
-  margin-bottom 10px
-.mine-container>h5
-  font-size 16px
-  margin-bottom 15px
-  color #000
-  font-family "微软雅黑"
-.mine-container a
-  display inline-block
-  width 4rem
-  height 1rem
-  margin .2rem
-  text-align center
-  line-height 1rem
-  font-size 16px
-  border-radius 5%
-.mine-container .button_left
-  background-color #FF595B
-  color #fff
-.mine-container .button_right
-  border 1px solid #F47887
-  color #F47887
+.clubs
+    width 100%
+.clubs__item
+   width 100%
+   position relative
+   border-bottom .5px solid gainsboro
+img
+    width 1.2rem
+    height 1.2rem
+    margin .5rem
+    border-radius 999px
+h3
+    font-size .4rem
+    color #333
+    position absolute
+    top .45rem
+    left 1.99rem
+p
+    font-size .2rem
+    color #8e8e8f
+    position absolute
+    top 1.1rem
+    left 1.99rem
 </style>

@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from '@/store/index'
 // 自定义样式，覆盖原有mint-ui样式
 import './assets/css/mint-ui-style.css'
 import MintUI from 'mint-ui'
@@ -34,7 +35,7 @@ new Vue({
   el: '#app',
   router,
   MintUI,
-  // store,
+  store,
   axios,
   template: '<App/>',
   components: { App }
