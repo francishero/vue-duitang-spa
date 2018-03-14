@@ -15,7 +15,7 @@
 
 
 
-预览 (http://forwe.club)
+### 预览 :point_right: (http://forwe.club)
 
 ## Build Setup
 
@@ -77,7 +77,7 @@ upstream dt {
 
 server {
     listen 80;
-    server_name hellocassie.cn;
+    server_name forwe.club;
 
     location / {
         proxy_set_header Host  $http_host;
