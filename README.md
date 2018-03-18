@@ -12,6 +12,7 @@
 - esay-mock模拟数据
 - stylus编写样式
 
+<<<<<<< HEAD
 预览 (http://forwe.club)
 #### 使用Webpack的代码拆分在Vue中进行延迟加载(https://alexjoverm.github.io/2017/07/16/Lazy-load-in-Vue-using-Webpack-s-code-splitting/)
 当Vue应用程序变大时，使用Webpack代码拆分的延迟加载组件，路由或Vuex模块。
@@ -55,6 +56,12 @@ routes: [
   
   ],
 ```
+=======
+
+
+
+### 预览 :point_right: (http://forwe.club)
+>>>>>>> b6b45cd565cc818a68b5f29edd3a2e829ae79ad8
 
 ### webpack优化
 
@@ -153,7 +160,7 @@ upstream dt {
 
 server {
     listen 80;
-    server_name hellocassie.cn;
+    server_name forwe.club;
 
     location / {
         proxy_set_header Host  $http_host;
