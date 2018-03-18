@@ -12,11 +12,10 @@
 - esay-mock模拟数据
 - stylus编写样式
 
-<<<<<<< HEAD
-预览 (http://forwe.club)
-#### 使用Webpack的代码拆分在Vue中进行延迟加载(https://alexjoverm.github.io/2017/07/16/Lazy-load-in-Vue-using-Webpack-s-code-splitting/)
+### 预览 (http://forwe.club)
+#### [使用Webpack的代码拆分在Vue中进行延迟加载](https://alexjoverm.github.io/2017/07/16/Lazy-load-in-Vue-using-Webpack-s-code-splitting/)
 当Vue应用程序变大时，使用Webpack代码拆分的延迟加载组件，路由或Vuex模块。
-###### 延迟加载Vue路由器
+##### 延迟加载Vue路由器
 对于动态导入，第一种，也是优先选择的方式是，使用符合 ECMAScript 提案 的 import() 语法。第二种，则是使用 webpack 特定的 require.ensure。
 > import() 调用会在内部用到 promises。如果在旧有版本浏览器中使用 import()，记得使用 一个 polyfill 库（例如 es6-promise 或 promise-polyfill），来 shim Promise。
 ```
@@ -56,12 +55,6 @@ routes: [
   
   ],
 ```
-=======
-
-
-
-### 预览 :point_right: (http://forwe.club)
->>>>>>> b6b45cd565cc818a68b5f29edd3a2e829ae79ad8
 
 ### webpack优化
 
