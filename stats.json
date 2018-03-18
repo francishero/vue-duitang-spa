@@ -1,0 +1,22 @@
+{
+  "errors": [
+    "Entry module not found: Error: Can't resolve './src' in '/Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa'\nresolve './src' in '/Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa'\n  using description file: /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/package.json (relative path: .)\n    Field 'browser' doesn't contain a valid alias configuration\n    using description file: /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/package.json (relative path: ./src)\n      no extension\n        Field 'browser' doesn't contain a valid alias configuration\n        /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/src is not a file\n      .wasm\n        Field 'browser' doesn't contain a valid alias configuration\n        /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/src.wasm doesn't exist\n      .mjs\n        Field 'browser' doesn't contain a valid alias configuration\n        /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/src.mjs doesn't exist\n      .js\n        Field 'browser' doesn't contain a valid alias configuration\n        /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/src.js doesn't exist\n      .json\n        Field 'browser' doesn't contain a valid alias configuration\n        /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/src.json doesn't exist\n      as directory\n        existing directory\n          using path: /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/src/index\n            using description file: /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/package.json (relative path: ./src/index)\n              no extension\n                Field 'browser' doesn't contain a valid alias configuration\n                /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/src/index doesn't exist\n              .wasm\n                Field 'browser' doesn't contain a valid alias configuration\n                /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/src/index.wasm doesn't exist\n              .mjs\n                Field 'browser' doesn't contain a valid alias configuration\n                /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/src/index.mjs doesn't exist\n              .js\n                Field 'browser' doesn't contain a valid alias configuration\n                /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/src/index.js doesn't exist\n              .json\n                Field 'browser' doesn't contain a valid alias configuration\n                /Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/src/index.json doesn't exist"
+  ],
+  "warnings": [
+    "configuration\nThe 'mode' option has not been set. Set 'mode' option to 'development' or 'production' to enable defaults for this environment. "
+  ],
+  "version": "4.1.1",
+  "hash": "a1ea8e0b83f4ab14687a",
+  "time": 56,
+  "builtAt": 1521373383793,
+  "publicPath": "",
+  "outputPath": "/Users/cassie/Desktop/GithubPro/Mine/vue-duitang-spa/dist",
+  "assetsByChunkName": {},
+  "assets": [],
+  "filteredAssets": 0,
+  "entrypoints": {},
+  "chunks": [],
+  "modules": [],
+  "filteredModules": 0,
+  "children": []
+}

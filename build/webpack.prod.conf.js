@@ -11,6 +11,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
+
 const env = require('../config/prod.env')
 
 const webpackConfig = merge(baseWebpackConfig, {
@@ -107,6 +110,17 @@ const webpackConfig = merge(baseWebpackConfig, {
       children: true,
       minChunks: 3
     }),
+
+    new webpack.optimize.CommonsChunkPlugin({
+      async: 'shared-module',
+      minChunks: (module, count) => (
+        count >= 2    // 当一个模块被重复引用2次或以上的时候单独打包起来。 
+      )
+    }),
+
+    new BundleAnalyzerPlugin(),
+
+   
 
     // copy custom static assets
     new CopyWebpackPlugin([

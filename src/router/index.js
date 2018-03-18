@@ -6,37 +6,37 @@ export default new Router({
   routes: [
     {
       path: '/article/:id',
-      component: resolve => require(['@/page/article/article'], resolve)
+      component: () => import('@/page/article/article')
     },
     {
       path: '/',
       name: 'Index',
-      component: resolve => require(['@/page/index.vue'], resolve),
+      component: () => import('@/page/index.vue'),
       redirect: '/firstpage',
       children: [{
         path: '/firstpage',
         name: 'firstpage',
-        component: resolve => require(['@/page/home/firstpage'], resolve),
+        component: () => import('@/page/home/firstpage'),
       }, {
         path: '/discovery',
         name: 'discovery',
-        component: resolve => require(['@/page/home/discovery'], resolve),
+        component: () => import('@/page/home/discovery'),
         
       }, {
         path: '/shop',
         name: 'shop',
-        component: resolve => require(['@/page/home/shop'], resolve),
+        component: () => import('@/page/home/shop'),
       }, {
         path: '/mine',
         name: 'Mine',
-        component: resolve => require(['@/page/home/mine'], resolve),
+        component: () => import('@/page/home/mine'),
       },{
         path: '/all',
         name: 'all',
-        component: resolve => require(['@/components/discovery/all'], resolve),
+        component: () => import('@/components/discovery/all'),
       }]
     }
-
+  
   ],
   mode: 'history'
 })

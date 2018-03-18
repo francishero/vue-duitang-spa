@@ -1,9 +1,9 @@
 
-    <template>
+<template>
 <div class="article">
    <articleHead></articleHead>
    <articleDesc :article="article"></articleDesc>
-   </div>
+</div>
 
 </template>
 
