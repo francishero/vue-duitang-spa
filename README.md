@@ -65,12 +65,6 @@ routes: [
 ```
  loader: ['babel-loader?cacheDirectory=true']
  ```
-- 配置modules以及配置项目相关的alias
-通过这些配置，webpack可以不必自己遍历去搜索模块等，而可以通过我们定义的路径，快速定位。尤其是node_modules的位置，这个位置可以通过modules选项配置，节省webpack去查找的时间。
-webpack.base.conf.js，在module.exports的resolve属性里配置modules和alias。
-```
- modules: [path.resolve(__dirname, '../../node_modules')], // node_modules文件夹所在的位置取决于跟webpack.base.conf.js相对的路径
- ```
 - 配置loader的include和exclude
 通常情况下，我们不需要loader去编译node_modules下的js文件，而我们只需要编译我们项目目录下的js就行了
 ```

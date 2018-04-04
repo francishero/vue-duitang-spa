@@ -3,7 +3,7 @@
   <router-link :to="articleIndex.url">
     <header class="b-header">
       <a class="b-author-link" href="#">
-      <img :src="articleIndex.authorPic" alt="作者头像">
+      <img v-lazy="articleIndex.authorPic" alt="作者头像">
       <span class="b-author">
         {{articleIndex.author}}
       </span>
@@ -13,7 +13,7 @@
     <div class="b-content">
       <div class="b-title">{{articleIndex.title}}</div>
       <div class="b-intro">{{articleIndex.intro}}</div>
-      <div class="introPic"><img :src="articleIndex.introPic" alt="封面图片"></div>
+      <div class="introPic"><img v-lazy="articleIndex.introPic" alt="封面图片"></div>
       <div class="b-like"><icon name="eye" width="13px"></icon>&nbsp;<span>{{articleIndex.browser}}</span>&nbsp;&nbsp;&nbsp;<icon name="star" width="12px"></icon>&nbsp;<span>{{articleIndex.browser}}</span></div>
    </div>
   </router-link>
@@ -52,6 +52,8 @@ export default {
     width .6rem
     height .6rem
     margin-right .3rem
+  
+    
   .b-author
     position absolute
     top 0

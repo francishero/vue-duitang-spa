@@ -12,7 +12,7 @@
     <div class="content">
       <div class="content-item" v-for="item in clubItems">
         <div class="item__left">
-          <img v-lazy="item.photo.path" alt="">
+          <img v-lazy="item.photo.path" alt="社团">
         </div>
         <div class="item__center">
           <h3>{{item.name}}</h3>

@@ -1,8 +1,8 @@
 <template>
   <div class="dailyselect">
     <!-- 下拉刷新 -->
-    <mt-loadmore class="mt-loadmore1" top-pull-text="加载更多" top-drop-text="释放加载"
-      :top-method="loadTop"  @top-status-change="handleTopChange" ref="loadmore">
+    <mt-loadmore  top-pull-text="加载更多" top-drop-text="释放加载"
+      :top-method="loadTop"   ref="loadmore">
     <!-- 轮播图 -->
     <mt-swipe :auto="4000">
       <mt-swipe-item v-for="swipeItem in swipeArr"  :key="swipeItem.id"  :style="{backgroundImage:'url(' + swipeItem.swipeUrl + ')'}">
@@ -26,15 +26,19 @@
 import articleBlock from '../public/article/articleBlock'
 export default {
 mounted () {
+  
 this.axios.get('https://www.easy-mock.com/mock/5a1d88738e6ddb24964d081b/duitang/swipe')
       .then((response) => {
         // console.log(response.data.swipeArr);
+        var swipeArr1 = JSON.stringify(response.data.swipeArr);
+        sessionStorage.setItem('swiper',swipeArr1);
         this.swipeArr = response.data.swipeArr
 
       })
       .catch((error) => {
         console.log(error)
       })
+
 this.axios.get('https://www.easy-mock.com/mock/5a1d88738e6ddb24964d081b/duitang/articles')
       .then((response) => {
         this.articles = response.data.articles
@@ -66,15 +70,14 @@ components: {
         this.articles.unshift(response.data.newArticles[0])
         oList.scrollTop = 0
         //  console.log(this.$refs.loadmore)
+        //需手动调用该事件，对组件进行一些重新定位的操作
         this.$refs.loadmore.onTopLoaded(id)
       })
       .catch(function (error) {
         console.log(error)
       })
     },
-     handleTopChange () {
 
-    },
     // 加载更多
     loadMore() {
       this.loading = true

@@ -21,5 +21,9 @@ export default {
   color: #2c3e50;
   /* margin-top: 60px; */
 }
-
+image[lazy=loading] {
+  width:40px;
+  height: 30px;
+  margin: auto
+}
 </style>
